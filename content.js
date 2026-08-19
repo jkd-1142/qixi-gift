@@ -75,10 +75,10 @@ const CONTENT = {
     galleryTitle: "Kỳ tích",
     gallerySub: "Những khoảnh khắc đã làm nên câu chuyện của hai ta",
     cap1: "Người thì vẫn ngơ ngơ",
-    cap2: "Một trời",
-    cap3: "Cả hai đã đi đến nhau bằng dĩa cơm sườn",
-    cap4: "Người thì vẫn ngây thơ",
-    cap5: "Một Vực",
+    cap2: "Người thì vẫn ngây thơ",
+    cap3: "Một trời",
+    cap4: "Một Vực",
+    cap5: "Cả hai đã đi đến nhau bằng dĩa cơm sườn",
     cap6: "Và cả tương lai hai đứa đi tiếp",
 
     /* lá thư */
