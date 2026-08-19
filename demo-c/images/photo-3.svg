@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#241a45"/>
+      <stop offset="0.55" stop-color="#4a2d63"/>
+      <stop offset="1" stop-color="#8a4a7a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <circle cx="400" cy="300" r="110" fill="#ffb3c1" opacity="0.28"/>
+  <circle cx="400" cy="300" r="70" fill="#ffb3c1" opacity="0.35"/>
+  <path d="M400 250 Q430 220 470 230 Q510 240 510 280 Q510 330 400 400 Q290 330 290 280 Q290 240 330 230 Q370 220 400 250 Z" fill="#f0a6b5" opacity="0.95"/>
+  <circle cx="600" cy="140" r="1.6" fill="#fff" opacity="0.8"/>
+  <circle cx="180" cy="100" r="1.4" fill="#fff" opacity="0.7"/>
+  <circle cx="520" cy="460" r="1.5" fill="#fff" opacity="0.6"/>
+  <circle cx="260" cy="420" r="1.2" fill="#fff" opacity="0.6"/>
+  <text x="400" y="540" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#f0e6cf" opacity="0.75" letter-spacing="6">Minh &amp; Lan</text>
+</svg>

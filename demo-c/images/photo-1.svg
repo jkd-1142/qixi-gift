@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1440"/>
+      <stop offset="0.5" stop-color="#3d1f56"/>
+      <stop offset="1" stop-color="#6b2d5c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <circle cx="680" cy="90" r="34" fill="#ffe9b8" opacity="0.9"/>
+  <circle cx="120" cy="150" r="2" fill="#fff" opacity="0.8"/>
+  <circle cx="300" cy="90" r="1.6" fill="#fff" opacity="0.7"/>
+  <circle cx="520" cy="200" r="1.4" fill="#fff" opacity="0.6"/>
+  <circle cx="200" cy="320" r="1.8" fill="#fff" opacity="0.7"/>
+  <circle cx="640" cy="380" r="1.3" fill="#fff" opacity="0.6"/>
+  <circle cx="420" cy="70" r="1.2" fill="#fff" opacity="0.5"/>
+  <path d="M400 270 L330 370 L400 340 L470 370 Z" fill="#f0a6b5" opacity="0.85"/>
+  <path d="M400 300 Q340 340 330 370 L400 340 L470 370 Q460 340 400 300 Z" fill="#e8e6df" opacity="0.35"/>
+  <text x="400" y="480" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#f0e6cf" opacity="0.75" letter-spacing="6">Minh &amp; Lan</text>
+</svg>

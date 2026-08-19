@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>七夕節 · Chúc mừng Thất Tịch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Noto+Serif+TC:wght@400;500;600;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-lang="vi">
+
+  <canvas id="lanterns"></canvas>
+
+  <header class="topbar">
+    <div class="brand">七 夕</div>
+    <button class="lang-btn" id="langBtn" type="button" aria-label="Đổi ngôn ngữ">
+      <span class="lang-vi active">VI</span><span class="divider">/</span><span class="lang-zh">繁</span>
+    </button>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="lantern-rail" aria-hidden="true">
+        <svg class="lantern l1" viewBox="0 0 60 90" width="46" height="69">
+          <line x1="30" y1="0" x2="30" y2="18" stroke="#7d1616" stroke-width="2"/>
+          <path d="M12 20 L48 20 L44 46 Q48 56 44 66 L16 66 Q12 56 16 46 Z" fill="#c01818" stroke="#8f1c1c" stroke-width="1.5"/>
+          <path d="M14 32 Q30 26 46 32" stroke="#e8a0a0" stroke-width="1.4" fill="none" opacity="0.7"/>
+          <path d="M14 48 Q30 42 46 48" stroke="#e8a0a0" stroke-width="1.4" fill="none" opacity="0.7"/>
+          <rect x="13" y="66" width="34" height="8" rx="2" fill="url(#gGold)"/>
+          <rect x="22" y="74" width="16" height="14" rx="2" fill="#c9a04a"/>
+          <defs><linearGradient id="gGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0c887"/><stop offset="1" stop-color="#b98a2f"/></linearGradient></defs>
+        </svg>
+        <svg class="lantern l2" viewBox="0 0 60 90" width="34" height="51">
+          <line x1="30" y1="0" x2="30" y2="18" stroke="#7d1616" stroke-width="2"/>
+          <path d="M12 20 L48 20 L44 46 Q48 56 44 66 L16 66 Q12 56 16 46 Z" fill="#a32020" stroke="#7d1616" stroke-width="1.5"/>
+          <path d="M14 32 Q30 26 46 32" stroke="#f2c9a8" stroke-width="1.4" fill="none" opacity="0.7"/>
+          <rect x="13" y="66" width="34" height="8" rx="2" fill="#c9a04a"/>
+          <rect x="22" y="74" width="16" height="14" rx="2" fill="#b98a2f"/>
+        </svg>
+        <svg class="lantern l3" viewBox="0 0 60 90" width="46" height="69">
+          <line x1="30" y1="0" x2="30" y2="18" stroke="#7d1616" stroke-width="2"/>
+          <path d="M12 20 L48 20 L44 46 Q48 56 44 66 L16 66 Q12 56 16 46 Z" fill="#c01818" stroke="#8f1c1c" stroke-width="1.5"/>
+          <path d="M14 32 Q30 26 46 32" stroke="#e8a0a0" stroke-width="1.4" fill="none" opacity="0.7"/>
+          <path d="M14 48 Q30 42 46 48" stroke="#f2c9a8" stroke-width="1.4" fill="none" opacity="0.7"/>
+          <rect x="13" y="66" width="34" height="8" rx="2" fill="#c9a04a"/>
+          <rect x="22" y="74" width="16" height="14" rx="2" fill="#b98a2f"/>
+        </svg>
+        <svg class="lantern l4" viewBox="0 0 60 90" width="34" height="51">
+          <line x1="30" y1="0" x2="30" y2="18" stroke="#7d1616" stroke-width="2"/>
+          <path d="M12 20 L48 20 L44 46 Q48 56 44 66 L16 66 Q12 56 16 46 Z" fill="#a32020" stroke="#7d1616" stroke-width="1.5"/>
+          <path d="M14 32 Q30 26 46 32" stroke="#e8a0a0" stroke-width="1.4" fill="none" opacity="0.7"/>
+          <rect x="13" y="66" width="34" height="8" rx="2" fill="#c9a04a"/>
+          <rect x="22" y="74" width="16" height="14" rx="2" fill="#b98a2f"/>
+        </svg>
+        <svg class="lantern l5" viewBox="0 0 60 90" width="46" height="69">
+          <line x1="30" y1="0" x2="30" y2="18" stroke="#7d1616" stroke-width="2"/>
+          <path d="M12 20 L48 20 L44 46 Q48 56 44 66 L16 66 Q12 56 16 46 Z" fill="#c01818" stroke="#8f1c1c" stroke-width="1.5"/>
+          <path d="M14 32 Q30 26 46 32" stroke="#e8a0a0" stroke-width="1.4" fill="none" opacity="0.7"/>
+          <path d="M14 48 Q30 42 46 48" stroke="#f2c9a8" stroke-width="1.4" fill="none" opacity="0.7"/>
+          <rect x="13" y="66" width="34" height="8" rx="2" fill="#c9a04a"/>
+          <rect x="22" y="74" width="16" height="14" rx="2" fill="#b98a2f"/>
+        </svg>
+      </div>
+
+      <div class="hero-frame">
+        <div class="vert left" data-i18n="vertLeft">銀漢迢迢</div>
+        <div class="hero-inner">
+          <p class="eyebrow" data-i18n="eyebrow">Ngưu Lang và Chức Nữ · mỗi năm gặp một lần</p>
+          <div class="title-wrap">
+            <h1 class="title" data-i18n="heroTitle">七夕節</h1>
+            <span class="seal" aria-hidden="true">愛</span>
+          </div>
+          <p class="subtitle" data-i18n="subtitle">寄往星河彼岸的一封情書 · 親愛的蘭</p>
+          <div class="names">
+            <span class="name">明</span>
+            <span class="heart">♥</span>
+            <span class="name">蘭</span>
+          </div>
+
+          <div class="countdown" id="countdown">
+            <div class="cd-label" data-i18n="cdLabel">離七夕之夜尚有 · 距 đêm Thất Tịch còn</div>
+            <div class="cd-units">
+              <div class="cd-item"><span class="cd-num" id="cdDays">0</span><span class="cd-txt" data-i18n="cdDays">日</span></div>
+              <span class="cd-sep">·</span>
+              <div class="cd-item"><span class="cd-num" id="cdHours">0</span><span class="cd-txt" data-i18n="cdHours">時</span></div>
+              <span class="cd-sep">·</span>
+              <div class="cd-item"><span class="cd-num" id="cdMins">0</span><span class="cd-txt" data-i18n="cdMins">分</span></div>
+              <span class="cd-sep">·</span>
+              <div class="cd-item"><span class="cd-num" id="cdSecs">0</span><span class="cd-txt" data-i18n="cdSecs">秒</span></div>
+            </div>
+          </div>
+
+          <div class="today-banner" id="todayBanner" hidden>
+            <p class="today-line" data-i18n="todayLine">今夜便是七夕 · 牛郎織女來相會</p>
+            <p class="today-sub" data-i18n="todaySub">也是我，想對妳說一句話的夜晚…</p>
+          </div>
+        </div>
+        <div class="vert right" data-i18n="vertRight">佳期如夢</div>
+      </div>
+
+      <div class="scroll-hint">v ▼ v</div>
+    </section>
+
+    <section class="bridge reveal" id="bridge">
+      <h2 class="section-title" data-i18n="bridgeTitle">Cầu Ô Thước · Nối đôi bờ Ngân Hà</h2>
+      <p class="section-sub" data-i18n="bridgeSub">Giữ nút để gọi đàn chim Ô Thước dệt cầu, đưa Ngưu Lang và Chức Nữ về bên nhau</p>
+      <div class="bridge-board">
+        <canvas id="bridgeCanvas"></canvas>
+        <div class="bridge-hud">
+          <span class="bridge-status" data-i18n="bridgeHint">Giữ nút phía dưới để gọi chim dệt cầu</span>
+          <span class="bridge-progress"><b id="bridgePct">0</b>%</span>
+        </div>
+        <div class="bridge-done" id="bridgeDone" hidden>
+          <p class="done-line" data-i18n="bridgeDone">Ô Thước dệt cầu, Ngưu Lang và Chức Nữ gặp nhau. Như anh và em, dù bao xa vẫn về bên nhau</p>
+          <button class="continue-btn" id="bridgeNext" type="button" data-i18n="continueBtn">Tiếp tục</button>
+        </div>
+      </div>
+      <button class="hold-btn" id="holdBtn" type="button">
+        <span data-i18n="holdLabel">Giữ nút tại đây để gọi đàn chim Ô Thước</span>
+      </button>
+    </section>
+
+    <section class="gallery reveal">
+      <h2 class="section-title" data-i18n="galleryTitle">我們的回憶</h2>
+      <p class="section-sub" data-i18n="gallerySub">那些讓我們的愛情成形的每一刻</p>
+      <div class="grid">
+        <figure class="card reveal" data-photo="1">
+          <img src="../demo/images/photo-1.svg" alt="Kỷ niệm 1" loading="lazy">
+          <figcaption><span data-i18n="cap1">初次相遇的那天</span></figcaption>
+        </figure>
+        <figure class="card reveal" data-photo="2">
+          <img src="../demo/images/photo-2.svg" alt="Kỷ niệm 2" loading="lazy">
+          <figcaption><span data-i18n="cap2">我們的第一次約會</span></figcaption>
+        </figure>
+        <figure class="card reveal" data-photo="3">
+          <img src="../demo/images/photo-3.svg" alt="Kỷ niệm 3" loading="lazy">
+          <figcaption><span data-i18n="cap3">我的心屬於妳</span></figcaption>
+        </figure>
+        <figure class="card reveal" data-photo="4">
+          <img src="../demo/images/photo-4.svg" alt="Kỷ niệm 4" loading="lazy">
+          <figcaption><span data-i18n="cap4">屬於我們的旅行</span></figcaption>
+        </figure>
+        <figure class="card reveal" data-photo="5">
+          <img src="../demo/images/photo-5.svg" alt="Kỷ niệm 5" loading="lazy">
+          <figcaption><span data-i18n="cap5">相處的每一刻</span></figcaption>
+        </figure>
+        <figure class="card reveal" data-photo="6">
+          <img src="../demo/images/photo-6.svg" alt="Kỷ niệm 6" loading="lazy">
+          <figcaption><span data-i18n="cap6">還有我們的未來</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="letter reveal" id="letter">
+      <h2 class="section-title" data-i18n="letterTitle">想對妳說的話</h2>
+      <p class="section-sub" data-i18n="letterSub">請揭開封印，開啟這封錦書</p>
+
+      <div class="seal-btn" id="sealBtn" role="button" tabindex="0" aria-label="Mở thư">
+        <div class="seal-disc">愛</div>
+        <p class="seal-hint" data-i18n="sealHint">輕觸印章 · 開啟情書</p>
+      </div>
+
+      <div class="letter-card" id="letterCard" hidden>
+        <div class="letter-scroll">
+          <p class="letter-head" data-i18n="letterHead">親愛的蘭：</p>
+          <p data-i18n="letterP1">七夕之夜，別人仰望星河，是為了牛郎與織女。而我仰望星河，只想找到妳微笑的身影。</p>
+          <p data-i18n="letterP2">謝謝妳走進我的生命，讓平凡的日子都變成難忘的風景。我不需要一年一度的相會，我只願每個清晨醒來，第一個見到的人仍是妳。</p>
+          <p data-i18n="letterP3">願年年七夕，與君同在。愛妳，今天，還有永遠。</p>
+          <p class="letter-sign" data-i18n="letterSign">- Anh yêu em · Minh</p>
+          <div class="letter-seal" aria-hidden="true">七夕 · 永結同心</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p data-i18n="footerLine">Viết nhân dịp Thất Tịch, mùng 7 tháng 7, dưới dải Ngân Hà</p>
+    <p class="footer-zh" data-i18n="footerZh">丙午年七月初七 · 二〇二六</p>
+  </footer>
+
+  <div class="quiz" id="quiz" hidden>
+    <div class="quiz-card" id="quizCard">
+      <div class="quiz-badge">♥</div>
+      <h3 class="quiz-title" data-i18n="quizTitle">Mật khẩu tình yêu</h3>
+      <p class="quiz-q" data-i18n="quizQ">Chúng ta gặp nhau lần đầu trong dịp nào?</p>
+      <div class="quiz-options" id="quizOptions">
+        <button type="button" data-i="0" data-i18n="quizA1">Một mùa hè ở biển</button>
+        <button type="button" data-i="1" data-i18n="quizA2">Trong một đêm mưa sao băng</button>
+        <button type="button" data-i="2" data-i18n="quizA3">Ngày khai giảng</button>
+        <button type="button" data-i="3" data-i18n="quizA4">Tại một quán cà phê</button>
+      </div>
+      <p class="quiz-msg" id="quizMsg" hidden data-i18n="quizWrong">Chưa đúng rồi… nhưng anh vẫn yêu em. Thử lại nhé ♥</p>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" id="lbClose" type="button" aria-label="Đóng">×</button>
+    <figure class="lb-figure">
+      <img id="lbImg" src="" alt="">
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="../content.js"></script>
+  <script src="../photos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

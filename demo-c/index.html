@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>七夕 · The Night the Weaver Crosses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400&family=Noto+Sans+TC:wght@400;500;600&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-lang="vi">
+
+  <header class="topbar">
+    <div class="brand">七 夕 <span class="brand-en">/ QIXI</span></div>
+    <button class="lang-btn" id="langBtn" type="button" aria-label="Đổi ngôn ngữ">
+      <span class="lang-vi active">VI</span><span class="divider">/</span><span class="lang-zh">繁</span>
+    </button>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="label" data-i18n="heroLabel">Night of the Weaver / 織女之夜</p>
+        <h1 class="title">
+          <span class="title-cn" data-i18n="heroCn">七夕</span>
+          <span class="title-en" data-i18n="heroTitleEn">the night the stars come home</span>
+        </h1>
+        <p class="subline" data-i18n="heroSub">Em ngước nhìn trời là sẽ thấy anh, ở khu vườn sao nơi mình hẹn gặp nhau mỗi năm.</p>
+        <a class="cta" href="#letter" data-i18n="heroCta">Mở thư</a>
+        <p class="hero-note">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span data-i18n="heroNote">Đêm nay, hai người tưởng nhớ nhau đều bước ra cùng một dòng sông sáng.</span>
+        </p>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <figure class="vphoto vphoto-a">
+          <img src="images/photo-5.svg" alt="">
+          <figcaption>still from our night sky</figcaption>
+        </figure>
+        <figure class="vphoto vphoto-b">
+          <img src="images/photo-3.svg" alt="">
+        </figure>
+        <span class="vcoords">22.5316°N · 114.0545°E</span>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>七夕 / QIXI / WEAVER / 織女 / MILKY WAY / 星河 / 愛 / LOVE /</span>
+        <span>七夕 / QIXI / WEAVER / 織女 / MILKY WAY / 星河 / 愛 / LOVE /</span>
+      </div>
+    </div>
+
+    <section class="chapters" id="chapters">
+      <div class="chapter chapter-alt reveal">
+        <div class="chapter-copy">
+          <p class="label" data-i18n="ch1Label">chapter one · 相遇</p>
+          <h2 class="chapter-title" data-i18n="ch1Title">Gặp em</h2>
+          <p class="chapter-text" data-i18n="ch1Text">Một ngày đầu mùa, anh gặp em, và trời bỗng trở thành nơi có thể gieo sao.</p>
+        </div>
+        <figure class="chapter-photo reveal">
+          <img src="images/photo-1.svg" alt="" loading="lazy">
+          <figcaption>01</figcaption>
+        </figure>
+      </div>
+
+      <div class="chapter reveal">
+        <div class="chapter-copy">
+          <p class="label" data-i18n="ch2Label">chapter two · 星河</p>
+          <h2 class="chapter-title" data-i18n="ch2Title">Dòng sông trên trời</h2>
+          <p class="chapter-text" data-i18n="ch2Text">Người ta bảo Ngân Hà chia đôi bờ. Anh chỉ thấy nó là con đường sáng nhất dẫn về em.</p>
+        </div>
+        <figure class="chapter-photo reveal">
+          <img src="images/photo-2.svg" alt="" loading="lazy">
+          <figcaption>02</figcaption>
+        </figure>
+      </div>
+
+      <div class="chapter chapter-alt reveal">
+        <div class="chapter-copy">
+          <p class="label" data-i18n="ch3Label">chapter three · 約定</p>
+          <h2 class="chapter-title" data-i18n="ch3Title">Lời hẹn</h2>
+          <p class="chapter-text" data-i18n="ch3Text">Mỗi năm một lần, trên cầu Ô Thước, mình gặp lại. Không cần nhiều hơn, vì mình đã có cả đời.</p>
+        </div>
+        <figure class="chapter-photo reveal">
+          <img src="images/photo-6.svg" alt="" loading="lazy">
+          <figcaption>03</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="gallery reveal">
+      <div class="gallery-head">
+        <p class="label" data-i18n="galLabel">keepsake · 留影</p>
+        <h2 class="gallery-title" data-i18n="galTitle">Sáu khung hình, giữ cho em</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="g-card reveal" data-photo="1"><img src="images/photo-1.svg" alt="" loading="lazy"><figcaption class="g-cap" data-i18n="cap1">ngày đầu gặp gỡ</figcaption></figure>
+        <figure class="g-card reveal" data-photo="2"><img src="images/photo-2.svg" alt="" loading="lazy"><figcaption class="g-cap" data-i18n="cap2">buổi hẹn đầu tiên</figcaption></figure>
+        <figure class="g-card reveal" data-photo="3"><img src="images/photo-3.svg" alt="" loading="lazy"><figcaption class="g-cap" data-i18n="cap3">trái tim anh thuộc về em</figcaption></figure>
+        <figure class="g-card reveal" data-photo="4"><img src="images/photo-4.svg" alt="" loading="lazy"><figcaption class="g-cap" data-i18n="cap4">chuyến đi của riêng mình</figcaption></figure>
+        <figure class="g-card reveal" data-photo="5"><img src="images/photo-5.svg" alt="" loading="lazy"><figcaption class="g-cap" data-i18n="cap5">từng khoảnh khắc bên nhau</figcaption></figure>
+        <figure class="g-card reveal" data-photo="6"><img src="images/photo-6.svg" alt="" loading="lazy"><figcaption class="g-cap" data-i18n="cap6">và cả tương lai của mình</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="letter reveal" id="letter">
+      <div class="letter-head">
+        <p class="label" data-i18n="letterLabel">a letter, sealed in starlight · 一封情書</p>
+        <h2 class="letter-title" data-i18n="letterTitle">Lá thư</h2>
+        <p class="letter-sub" data-i18n="letterSub">Bấm tim đỏ để mở phong bì. Anh viết nó dưới đúng bầu trời này.</p>
+      </div>
+
+      <div class="seal-btn" id="sealBtn" role="button" tabindex="0" aria-label="Mở thư">
+        <span class="seal-heart" aria-hidden="true">♥</span>
+      </div>
+
+      <div class="sheet" id="sheet" hidden>
+        <div class="sheet-meta">QIXI / 丙午年七月 <span class="pulse-dot" aria-hidden="true"></span></div>
+        <div class="sheet-body" id="sheetBody" aria-live="polite"></div>
+        <div class="sheet-tail" id="sheetTail" data-i18n="letterSign">- Anh yêu em · Minh</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p data-i18n="footerLine">Viết nhân dịp Thất Tịch, mùng 7 tháng 7, dưới dải Ngân Hà.</p>
+    <p class="footer-zh">丙午年七月初七 · 二〇二六</p>
+  </footer>
+
+  <div class="quiz" id="quiz" hidden>
+    <div class="quiz-card" id="quizCard">
+      <span class="quiz-dot" aria-hidden="true">♥</span>
+      <h3 class="quiz-title" data-i18n="quizTitle">Mật khẩu tình yêu</h3>
+      <p class="quiz-q" data-i18n="quizQ">Chúng ta gặp nhau lần đầu trong dịp nào?</p>
+      <div class="quiz-options" id="quizOptions">
+        <button type="button" data-i="0" data-i18n="quizA1">Một mùa hè ở biển</button>
+        <button type="button" data-i="1" data-i18n="quizA2">Trong một đêm mưa sao băng</button>
+        <button type="button" data-i="2" data-i18n="quizA3">Ngày khai giảng</button>
+        <button type="button" data-i="3" data-i18n="quizA4">Tại một quán cà phê</button>
+      </div>
+      <p class="quiz-msg" id="quizMsg" hidden data-i18n="quizWrong">Chưa đúng rồi, nhưng anh vẫn yêu em. Thử lại nhé.</p>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" id="lbClose" type="button" aria-label="Đóng">×</button>
+    <figure class="lb-figure">
+      <img id="lbImg" src="" alt="">
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="../content.js"></script>
+  <script src="../photos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

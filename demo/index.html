@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>七夕節 · Chúc mừng Thất Tịch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-lang="vi">
+
+  <canvas id="stars"></canvas>
+
+  <header class="topbar">
+    <div class="brand">七 夕</div>
+    <button class="lang-btn" id="langBtn" type="button" aria-label="Đổi ngôn ngữ">
+      <span class="lang-vi active">VI</span><span class="divider">/</span><span class="lang-zh">繁</span>
+    </button>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <p class="eyebrow" data-i18n="eyebrow">Ngưu Lang và Chức Nữ · mỗi năm gặp một lần</p>
+      <h1 class="title" data-i18n="heroTitle">七夕節</h1>
+      <p class="subtitle" data-i18n="subtitle">Gửi đến em, người anh yêu nhất trên đời</p>
+      <div class="names">
+        <span class="name">Minh</span>
+        <span class="heart">♥</span>
+        <span class="name">Lan</span>
+      </div>
+
+      <div class="countdown" id="countdown">
+        <div class="cd-label" data-i18n="cdLabel">Còn lại đến đêm Thất Tịch</div>
+        <div class="cd-units">
+          <div class="cd-item"><span class="cd-num" id="cdDays">0</span><span class="cd-txt" data-i18n="cdDays">Ngày</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-item"><span class="cd-num" id="cdHours">0</span><span class="cd-txt" data-i18n="cdHours">Giờ</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-item"><span class="cd-num" id="cdMins">0</span><span class="cd-txt" data-i18n="cdMins">Phút</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-item"><span class="cd-num" id="cdSecs">0</span><span class="cd-txt" data-i18n="cdSecs">Giây</span></div>
+        </div>
+      </div>
+
+      <div class="today-banner" id="todayBanner" hidden>
+        <p class="today-line" data-i18n="todayLine">Hôm nay là đêm Thất Tịch, đêm của Ngưu Lang và Chức Nữ</p>
+        <p class="today-sub" data-i18n="todaySub">và cũng là đêm anh muốn nói với em một điều…</p>
+      </div>
+
+      <div class="scroll-hint">↓</div>
+    </section>
+
+    <section class="game reveal" id="gameA">
+      <h2 class="section-title" data-i18n="gameTitle">Trời sao rơi, bảy lời yêu</h2>
+      <p class="section-sub" data-i18n="gameSub">Chạm vào sao băng để gom đủ 7 lời anh muốn nói với em</p>
+      <div class="game-board">
+        <canvas id="gameCanvas"></canvas>
+        <div class="game-hud">
+          <span class="game-label" data-i18n="gameHint">Chạm vào sao băng đang rơi</span>
+          <span class="game-score"><b id="gameScore">0</b><span>/7</span></span>
+        </div>
+        <div class="game-toasts" id="gameToasts"></div>
+        <div class="game-done" id="gameDone" hidden>
+          <p class="done-line" data-i18n="doneMsg">Bảy vì sao băng đã thắp sáng bầu trời, như bảy năm anh chờ em.</p>
+          <button class="continue-btn" id="gameNext" type="button" data-i18n="continueBtn">Tiếp tục xem kỷ niệm của anh và em</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery reveal">
+      <h2 class="section-title" data-i18n="galleryTitle">Kỷ niệm của chúng mình</h2>
+      <p class="section-sub" data-i18n="gallerySub">Những khoảnh khắc đã làm nên câu chuyện của hai ta</p>
+      <div class="grid">
+        <figure class="card reveal" data-photo="1">
+          <img src="images/photo-1.svg" alt="Kỷ niệm 1" loading="lazy">
+          <figcaption><span data-i18n="cap1">Ngày đầu tiên gặp em</span></figcaption>
+        </figure>
+        <figure class="card reveal" data-photo="2">
+          <img src="images/photo-2.svg" alt="Kỷ niệm 2" loading="lazy">
+          <figcaption><span data-i18n="cap2">Buổi hẹn đầu tiên</span></figcaption>
+        </figure>
+        <figure class="card reveal" data-photo="3">
+          <img src="images/photo-3.svg" alt="Kỷ niệm 3" loading="lazy">
+          <figcaption><span data-i18n="cap3">Trái tim anh thuộc về em</span></figcaption>
+        </figure>
+        <figure class="card reveal" data-photo="4">
+          <img src="images/photo-4.svg" alt="Kỷ niệm 4" loading="lazy">
+          <figcaption><span data-i18n="cap4">Chuyến đi của chúng mình</span></figcaption>
+        </figure>
+        <figure class="card reveal" data-photo="5">
+          <img src="images/photo-5.svg" alt="Kỷ niệm 5" loading="lazy">
+          <figcaption><span data-i18n="cap5">Khoảnh khắc bên nhau</span></figcaption>
+        </figure>
+        <figure class="card reveal" data-photo="6">
+          <img src="images/photo-6.svg" alt="Kỷ niệm 6" loading="lazy">
+          <figcaption><span data-i18n="cap6">Và cả tương lai nữa</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="letter reveal" id="letter">
+      <h2 class="section-title" data-i18n="letterTitle">Lời anh muốn nói</h2>
+      <p class="section-sub" data-i18n="letterSub">Hãy chạm vào trái tim này để mở lá thư</p>
+
+      <button class="heart-btn" id="heartBtn" type="button" aria-label="Mở thư">
+        <span class="heart-pulse">♥</span>
+        <span class="heart-hint" data-i18n="heartHint">Chạm vào trái tim</span>
+      </button>
+
+      <div class="letter-card" id="letterCard" hidden>
+        <div class="letter-paper">
+          <p class="letter-head" data-i18n="letterHead">Lan yêu dấu,</p>
+          <p data-i18n="letterP1">Đêm Thất Tịch, người ta nhìn lên trời để ngóng Ngưu Lang và Chức Nữ. Còn anh nhìn lên trời, chỉ để thấy em đang mỉm cười ở một nơi nào đó.</p>
+          <p data-i18n="letterP2">Cảm ơn em đã đến bên anh, biến những ngày bình thường thành những ngày đáng nhớ. Anh không cần cầu nguyện cho một năm một lần được gặp. Anh chỉ ước mỗi sáng thức dậy, người anh gặp đầu tiên vẫn là em.</p>
+          <p data-i18n="letterP3">Yêu em, hôm nay, và cả đời sau.</p>
+          <p class="letter-sign" data-i18n="letterSign">- Anh yêu em</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p data-i18n="footerLine">Viết nhân dịp Thất Tịch, mùng 7 tháng 7, dưới dải Ngân Hà</p>
+    <p class="footer-zh" data-i18n="footerZh">七夕節快樂 · 二〇二六</p>
+  </footer>
+
+  <div class="quiz" id="quiz" hidden>
+    <div class="quiz-card" id="quizCard">
+      <div class="quiz-badge">♥</div>
+      <h3 class="quiz-title" data-i18n="quizTitle">Mật khẩu tình yêu</h3>
+      <p class="quiz-q" data-i18n="quizQ">Chúng ta gặp nhau lần đầu trong dịp nào?</p>
+      <div class="quiz-options" id="quizOptions">
+        <button type="button" data-i="0" data-i18n="quizA1">Một mùa hè ở biển</button>
+        <button type="button" data-i="1" data-i18n="quizA2">Trong một đêm mưa sao băng</button>
+        <button type="button" data-i="2" data-i18n="quizA3">Ngày khai giảng</button>
+        <button type="button" data-i="3" data-i18n="quizA4">Tại một quán cà phê</button>
+      </div>
+      <p class="quiz-msg" id="quizMsg" hidden data-i18n="quizWrong">Chưa đúng rồi… nhưng anh vẫn yêu em. Thử lại nhé ♥</p>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" id="lbClose" type="button" aria-label="Đóng">×</button>
+    <figure class="lb-figure">
+      <img id="lbImg" src="" alt="">
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="../content.js"></script>
+  <script src="../photos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

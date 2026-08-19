@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>七夕節</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f1c;
+      --card: #131a2a;
+      --text: #e8e6df;
+      --muted: #9aa0b4;
+      --gold: #d9b36a;
+      --red: #c8373a;
+      --crimson: #c24b4a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      padding: 3rem 1.5rem 4rem;
+    }
+    h1 {
+      font-family: "Noto Serif TC", serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.2em;
+      text-align: center;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+    .sub {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 3rem;
+    }
+    .compare {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1380px;
+      margin: 0 auto;
+    }
+    .option {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .option:hover { transform: translateY(-4px); border-color: rgba(255, 255, 255, 0.2); }
+
+    .thumb {
+      height: 210px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+    }
+    .thumb-a { background: radial-gradient(ellipse at 70% 20%, #16203a, #070b14 70%); }
+    .thumb-b { background: radial-gradient(ellipse at 50% 0%, #fdf4df, #f0dcb6 75%); }
+    .thumb-c { background: radial-gradient(ellipse at 80% 15%, #1c1e23, #0d0e11 70%); }
+
+    .thumb .mini-title {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Noto Serif TC", serif;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+    }
+    .thumb-a .mini-title { color: #d9b36a; font-size: 2.6rem; text-shadow: 0 0 40px rgba(217,179,106,.45); }
+    .thumb-b .mini-title { color: #a32020; font-size: 2.6rem; text-shadow: 0 2px 8px rgba(122,22,22,.3); }
+    .thumb-c .mini-title { color: #eae9e5; font-size: 2.6rem; text-shadow: 0 0 38px rgba(194,75,74,.5); }
+    .thumb-a .mini-stars { position: absolute; inset: 0; }
+    .thumb-b .mini-lantern { position: absolute; left: 50%; top: 14px; transform: translateX(-50%); width: 34px; height: 48px; background: #c01818; border-radius: 10px 10px 8px 8px; }
+    .thumb-b .mini-lantern::before { content: ""; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 2px; height: 14px; background: #7d1616; }
+    .thumb-c .mini-line {
+      position: absolute;
+      left: 14px; right: 14px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(194,75,74,0.8), transparent);
+    }
+    .thumb-c .mini-line:nth-of-type(1) { top: 30%; }
+    .thumb-c .mini-line:nth-of-type(2) { bottom: 26%; }
+    .thumb-c .mini-note {
+      position: absolute;
+      left: 16px; top: 12px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.52rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #97989f;
+    }
+
+    .tag {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .tag-c { border-color: rgba(194,75,74,0.45); color: #d97d7c; }
+    .option h2 {
+      font-family: "Noto Serif TC", serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.1em;
+      color: var(--text);
+    }
+    .option h2 small { display: block; font-family: "Be Vietnam Pro", sans-serif; font-size: 0.8rem; color: var(--muted); font-weight: 400; letter-spacing: 0.05em; margin-top: 0.2rem; }
+    .desc { font-size: 0.9rem; color: var(--muted); }
+    .feats { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.88rem; }
+    .feats li::before { content: "◆ "; color: var(--gold); font-size: 0.7rem; }
+    .feats li.c::before { color: var(--crimson); }
+    .btn {
+      margin-top: auto;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      padding: 0.8rem 1.4rem;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      transition: all 0.3s ease;
+    }
+    .btn-a { background: linear-gradient(135deg, #16203a, #0c1220); color: var(--gold); border: 1px solid rgba(217,179,106,0.4); }
+    .btn-b { background: linear-gradient(135deg, #c8373a, #9e1f22); color: #fdf7e9; border: 1px solid rgba(253,247,233,0.25); }
+    .btn-c { background: linear-gradient(135deg, #1a1c20, #101114); color: #d97d7c; border: 1px solid rgba(194,75,74,0.45); }
+    .btn:hover { opacity: 0.85; transform: translateY(-2px); }
+
+    .note {
+      max-width: 1380px;
+      margin: 3rem auto 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      padding: 1.4rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    @media (max-width: 1000px) {
+      .compare { grid-template-columns: 1fr; max-width: 520px; }
+    }
+  </style>
+</head>
+<body>
+  <h1>七夕節 · 三選一</h1>
+  <p class="sub">Ba bản thiết kế · Tất cả đều song ngữ Việt–Trung (phồn thể) ·</p>
+
+  <div class="compare">
+
+    <div class="option">
+      <div class="thumb thumb-a">
+        <div class="mini-stars">✦ ✧ ✦ ✧ ✦</div>
+        <div class="mini-title">七夕</div>
+      </div>
+      <span class="tag">Bản A</span>
+      <h2>Tối giản hiện đại · Đêm sao <small>Minimal · Night Sky</small></h2>
+      <p class="desc">Nền xanh đêm sâu thẳm, sao nhấp nháy, sao băng vụt qua. Vàng nhạt + hồng đào trên nền tối. Sang trọng, yên tĩnh, tập trung vào cảm xúc.</p>
+      <ul class="feats">
+        <li>Trò chơi "Đón sao băng": chạm bắt 7 sao băng rơi, mỗi sao hé lộ 1 lời yêu</li>
+        <li>Hiệu ứng sao băng theo thời gian thực (canvas)</li>
+        <li>Mật khẩu tình yêu: trả lời đúng câu hỏi mới mở được thư</li>
+        <li>Typography lớn, khoảng trắng rộng, tối giản</li>
+      </ul>
+      <a class="btn btn-a" href="demo/index.html" target="_blank">Xem bản A →</a>
+    </div>
+
+    <div class="option">
+      <div class="thumb thumb-b">
+        <div class="mini-lantern"></div>
+        <div class="mini-title">七夕</div>
+      </div>
+      <span class="tag">Bản B</span>
+      <h2>Cổ điển Trung Hoa · Đỏ – Vàng <small>Traditional · Red &amp; Gold</small></h2>
+      <p class="desc">Nền giấy sen ấm, đỏ thiên hoàng + vàng hoàng kim. Đèn lồng lắc nhẹ, chữ dọc hai bên, con dấu ẩn lên hình, phong thư cổ điển. Đậm chất lễ hội truyền thống.</p>
+      <ul class="feats">
+        <li>Trò chơi "Cầu Ô Thước": giữ nút gọi đàn chim dệt cầu, Ngưu Lang–Chức Nữ đoàn viên</li>
+        <li>Đèn lồng treo đung đưa + đèn trời bay (canvas)</li>
+        <li>Mật khẩu tình yêu: gỡ con dấu 愛 bằng câu trả lời đúng</li>
+        <li>Thư cuộn viết lối thư pháp (Ma Shan Zheng)</li>
+      </ul>
+      <a class="btn btn-b" href="demo-b/index.html" target="_blank">Xem bản B →</a>
+    </div>
+
+    <div class="option">
+      <div class="thumb thumb-c">
+        <div class="mini-note">NIGHT OF THE WEAVER</div>
+        <div class="mini-line"></div>
+        <div class="mini-line"></div>
+        <div class="mini-title">七夕</div>
+      </div>
+      <span class="tag tag-c">Bản C · Mới</span>
+      <h2>Editorial Noir · Bạc – Đỏ thẫm <small>Premium · Starlit Editorial</small></h2>
+      <p class="desc">Figma-grade: than củi lạnh + xám bạc + một chấm đỏ thẫm duy nhất. Hero chia cột, chương hồi, gallery xám nghệ thuật, chữ viết máy đánh chữ ngay trong thư.</p>
+      <ul class="feats c">
+        <li>Chữ đi dần từng ký tự khi mở thư (hiệu ứng typewriter)</li>
+        <li>Storytelling 3 chương hồi + marquee chữ chạy</li>
+        <li>Gallery đen trắng chuyển màu khi rê chuột</li>
+        <li>Mật khẩu tình yêu · khóa accent một màu duy nhất</li>
+      </ul>
+      <a class="btn btn-c" href="demo-c/index.html" target="_blank">Xem bản C →</a>
+    </div>
+
+  </div>
+
+
+</body>
+</html>
